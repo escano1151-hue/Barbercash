@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #000000;
+    overscroll-behavior-y: none;
+  }
+}
+
+@layer utilities {
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.25s ease-out;
+  }
+}
+
+/* Scrollbar oculto pero funcional */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* === Theme accent utilities (driven by CSS variables on <html>) === */
+
+/* Text color using the active accent */
+.text-accent {
+  color: var(--accent);
+}
+
+/* Background using the active accent (solid) */
+.bg-accent {
+  background-color: var(--accent);
+}
+
+/* Background using the active accent at 10% opacity */
+.bg-accent\/10 {
+  background-color: var(--accent-soft);
+}
+
+/* Background using the active accent at 15% opacity */
+.bg-accent\/15 {
+  background-color: rgba(var(--accent-rgb), 0.15);
+}
+
+/* Border using the active accent */
+.border-accent {
+  border-color: var(--accent);
+}
+
+/* Gradient: from accent/40 to accent (for bars) */
+.bg-bar-gradient {
+  background-image: linear-gradient(
+    to top,
+    rgba(var(--accent-rgb), 0.4),
+    var(--accent)
+  );
+}
+
+/* Shadow using the accent color */
+.shadow-accent {
+  box-shadow: 0 4px 20px rgba(var(--accent-rgb), 0.3);
+}
+
+/* Ring/border focus using the accent */
+.focus\:border-accent:focus {
+  border-color: var(--accent);
+}
+
+/* Top border accent (for spinner) */
+.border-t-accent {
+  border-top-color: var(--accent);
+}
+
+/* Hover background accent */
+.hover\:bg-accent:hover {
+  background-color: var(--accent);
+}
+
+/* Hover brightness for solid accent buttons */
+.hover\:brightness-110:hover {
+  filter: brightness(1.15);
+}

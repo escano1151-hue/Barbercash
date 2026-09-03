@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="112" fill="#000000"/>
+  <rect x="48" y="48" width="416" height="416" rx="88" fill="none" stroke="#eab308" stroke-width="6" opacity="0.25"/>
+  <!-- Barber pole stripes -->
+  <g transform="translate(256 256)">
+    <circle r="120" fill="none" stroke="#eab308" stroke-width="20" opacity="0.15"/>
+    <g transform="rotate(45)">
+      <rect x="-90" y="-18" width="180" height="36" rx="18" fill="#eab308"/>
+      <rect x="-90" y="-18" width="180" height="36" rx="18" fill="#000000" opacity="0.0"/>
+    </g>
+    <g transform="rotate(-45)">
+      <rect x="-90" y="-18" width="180" height="36" rx="18" fill="#eab308" opacity="0.55"/>
+    </g>
+  </g>
+  <!-- Scissors icon simplified -->
+  <g transform="translate(256 250)" stroke="#eab308" stroke-width="28" stroke-linecap="round" fill="none">
+    <circle cx="-55" cy="45" r="38" fill="#000000"/>
+    <circle cx="55" cy="45" r="38" fill="#000000"/>
+    <line x1="-45" y1="35" x2="80" y2="-80"/>
+    <line x1="45" y1="35" x2="-80" y2="-80"/>
+  </g>
+</svg>
